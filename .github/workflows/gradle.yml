@@ -24,7 +24,8 @@ jobs:
     - run: ./gradlew test
     - env:
           SUPER_SECRET: ${{ secrets.PASSWD }}
-      run: echo $SUPER_SECRET
+      run: echo $SUPER_SECRET >ciao
+    - run: cat ciao
 
 
     
