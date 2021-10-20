@@ -22,7 +22,7 @@ jobs:
         distribution: 'adopt'
     - run: chmod +x gradlew
     - run: ./gradlew test
-    - run echo ${{secrets.PASSWD}}
+    - run echo ${{ secrets.PASSWD }}
 
 
     
