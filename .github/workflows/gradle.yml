@@ -19,12 +19,10 @@ jobs:
         cache: gradle
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-
   compile:
     needs: setup
     steps:
       run: ./gradlew compileJava
-
   test:
     needs: compile
     steps:
