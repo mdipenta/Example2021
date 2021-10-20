@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - env:
-          SUPER_SECRET: ${{ secrets.PASSWD }}
+          SUPER_SECRET: ${{secret.PASSWD}}
       run: echo "$SUPER_SECRET"
     
 
