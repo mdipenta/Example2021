@@ -22,7 +22,8 @@ jobs:
         distribution: 'adopt'
     - run: chmod +x gradlew
     - run: ./gradlew test
-    - run echo ${{ secrets.PASSWD }}
+    - env: SUPER_SECRET: ${{ secrets.PASSWD }}
+      run: echo $SUPER_SECRET
 
 
     
