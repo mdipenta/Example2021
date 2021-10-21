@@ -17,6 +17,8 @@ jobs:
         continue-on-error: true
       - name: Get the date
         run: date >>date.log
+      - name: Shows the list of dates
+        run: cat date.log
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
