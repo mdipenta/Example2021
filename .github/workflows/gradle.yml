@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download a single artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v2 
         with:
           name: date-log-file
         continue-on-error: true
