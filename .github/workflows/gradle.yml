@@ -7,14 +7,20 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  example-job:
     steps:
-    - env:
-          SUPER_SECRET: ${{secret.PASSWD}}
-      run: echo "$SUPER_SECRET"
-    
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: date-log-file
+      - name: Generate timestamp
+        shell: bash
+	run: date >>date.log
+      - name: Upload output file
+        uses: actions/upload-artifact@v2
+        with:
+          name: date-log-file
+          path: date.log
 
 
     
