@@ -10,12 +10,12 @@ jobs:
   runs-on: ubuntu-latest
   writing-job:
    - name: Get the date
-        run: date >>date.log
-      - name: Upload output file
-        uses: actions/upload-artifact@v2
-        with:
-          name: date-log-file
-          path: date.log
+     run: date >>date.log
+   - name: Upload output file
+     uses: actions/upload-artifact@v2
+     with:
+        name: date-log-file
+        path: date.log
   reading-job:
     needs: writing-job
     runs-on: ubuntu-latest
