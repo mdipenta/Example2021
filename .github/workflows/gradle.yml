@@ -14,8 +14,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: date-log-file
-      - name: Generate timestamp
-	run: echo "ciao"
+	run: date >>date.log
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
