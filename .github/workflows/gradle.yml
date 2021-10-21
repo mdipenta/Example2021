@@ -9,12 +9,12 @@ on:
 jobs:
   example-job:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - name: Download a single artifact
         uses: actions/download-artifact@v2
         with:
           name: date-log-file
+	continue-on-error: true
       - name: Get the date
         run: date >>date.log
       - name: Upload output file
