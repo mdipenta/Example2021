@@ -7,15 +7,16 @@ on:
     branches: [ master ]
 
 jobs:
-  docker-example:
+  testbox:
     runs-on: ubuntu-latest
-    steps:
+    container:
+      image: azul/zulu-openjdk-alpine:8-jre
+    steps:  
     - uses: actions/checkout@v2
-    - name: Run box version	    
-      uses: docker://alpine
-      with:
-        entrypoint: ./gradlew build
-
+    - name: What OS is running
+      run: uname -a
+    - name: What java version do we have
+      run: java -version
      
 
 
