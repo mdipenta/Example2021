@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: cosmomill/alpine-gradle
+      image: gradle
     steps:  
     - uses: actions/checkout@v2
     - name: Making gradlew executable
