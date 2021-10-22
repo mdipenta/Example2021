@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: gradle
+      image: gradle:4.7.0-jdk8-alpine
     steps:  
     - uses: actions/checkout@v2
     - name: Making gradlew executable
