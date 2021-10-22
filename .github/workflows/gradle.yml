@@ -7,28 +7,15 @@ on:
     branches: [ master ]
 
 jobs:
-  writing-job:
+  docker-example:
     runs-on: ubuntu-latest
     steps:
-     - name: Get the date
-       run: date >>date.log
-     - name: Upload output file
-       uses: actions/upload-artifact@v2
-       with:
-          name: date-log-file
-          path: date.log
-  reading-job:
-    needs: writing-job
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download a single artifact
-        uses: actions/download-artifact@v2 
-        with:
-          name: date-log-file
-        continue-on-error: true
-      - name: Shows the list of dates
-        run: cat date.log
-
+    - uses: actions/checkout@v2
+    - name: Run box version	    
+      uses: docker://alpine
+      with:
+        entrypoint: /opt
+        args: version
      
 
 
