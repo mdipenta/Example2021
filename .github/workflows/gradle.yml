@@ -10,7 +10,7 @@ jobs:
   testbox:
     runs-on: ubuntu-latest
     container:
-      image: azul/zulu-openjdk-alpine:8-jre
+      image:alpine
     steps:  
     - uses: actions/checkout@v2
     - name: Making gradlew executable
