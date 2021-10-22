@@ -13,8 +13,9 @@ jobs:
       image: azul/zulu-openjdk-alpine:8-jre
     steps:  
     - uses: actions/checkout@v2
-    - name: Running the build
+    - name: Making gradlew executable
       run: chmod ug+x gradlew
+    - name: Running the build
       run: ./gradlew build
      
 
