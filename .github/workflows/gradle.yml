@@ -13,10 +13,9 @@ jobs:
       image: azul/zulu-openjdk-alpine:8-jre
     steps:  
     - uses: actions/checkout@v2
-    - name: What OS is running
-      run: uname -a
-    - name: What java version do we have
-      run: java -version
+    - name: Running the build
+      run: chmod ug+x gradlew
+      run: ./gradlew build
      
 
 
