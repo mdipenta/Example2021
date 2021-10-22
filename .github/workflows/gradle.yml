@@ -7,16 +7,16 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  testbox:
     runs-on: ubuntu-latest
     container:
-      image: gradle:4.7.0-jdk8-alpine
+      image: azul/zulu-openjdk-alpine:8-jre
     steps:  
     - uses: actions/checkout@v2
-    - name: Making gradlew executable
-      run: chmod ug+x gradlew
-    - name: Running the build
-      run: ./gradlew build
+    - name: What OS is running
+      run: uname -a
+    - name: What java version do we have
+      run: java -version
      
 
 
