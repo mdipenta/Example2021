@@ -7,10 +7,10 @@ on:
     branches: [ master ]
 
 jobs:
-  testbox:
+  build:
     runs-on: ubuntu-latest
     container:
-      image:alpine
+      image: gradle:alpine
     steps:  
     - uses: actions/checkout@v2
     - name: Making gradlew executable
