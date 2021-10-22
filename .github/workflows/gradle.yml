@@ -14,8 +14,8 @@ jobs:
     - name: Run box version	    
       uses: docker://alpine
       with:
-        entrypoint: /opt
-        args: version
+        entrypoint: gradle build
+
      
 
 
