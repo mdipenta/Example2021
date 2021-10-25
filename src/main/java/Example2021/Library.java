@@ -4,7 +4,7 @@
 package Example2021;
 
 public class Library {
-    public boolean someLibraryMethod() {
+    public boolea someLibraryMethod() {
         return true; 
     }
 }
